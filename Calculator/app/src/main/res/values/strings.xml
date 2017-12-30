@@ -4,4 +4,7 @@
     <string name="button_clear">Clear</string>
     <string name="enter_number_1">Enter number 1</string>
     <string name="enter_number_2">Enter number 2</string>
+
+    <string name="success">Success!!</string>
+    <string name="failed">Failed!!</string>
 </resources>

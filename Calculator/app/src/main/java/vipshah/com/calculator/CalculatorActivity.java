@@ -1,6 +1,7 @@
 package vipshah.com.calculator;
 
 import android.app.AlertDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -47,7 +48,15 @@ public class CalculatorActivity extends AppCompatActivity {
 
                 int answer = n1 + n2;
 
-                displayAlertMessage(answer);
+                // displayAlertMessage(answer);
+
+                Intent intent =
+                        new Intent(CalculatorActivity.this, ResultActivity.class);
+
+                Bundle bundle = new Bundle();
+                bundle.putInt("key_answer", answer);
+                intent.putExtras(bundle);
+                startActivity(intent);
             }
         });
     }

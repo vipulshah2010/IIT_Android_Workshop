@@ -6,10 +6,17 @@
     android:orientation="vertical"
     android:padding="18dp">
 
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/ic_calculator" />
+
     <EditText
         android:id="@+id/number1Text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:hint="@string/enter_number_1"
         android:inputType="number" />
 

@@ -1,12 +1,12 @@
 package vipshah.com.calculator;
 
+import android.app.AlertDialog;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
 public class CalculatorActivity extends AppCompatActivity {
 
@@ -47,9 +47,22 @@ public class CalculatorActivity extends AppCompatActivity {
 
                 int answer = n1 + n2;
 
-                Toast.makeText(CalculatorActivity.this,
-                        "Answer is " + answer, Toast.LENGTH_LONG).show();
+                displayAlertMessage(answer);
             }
         });
     }
+
+    private void displayAlertMessage(int answer) {
+        AlertDialog.Builder builder =
+                new AlertDialog.Builder(this);
+
+        builder.setTitle("Answer");
+        builder.setMessage("Answer is " + answer);
+        builder.setCancelable(false);
+        builder.setPositiveButton("Yes", null);
+        builder.setNegativeButton("No", null);
+        builder.setNeutralButton("Cancel", null);
+        builder.show();
+    }
+
 }

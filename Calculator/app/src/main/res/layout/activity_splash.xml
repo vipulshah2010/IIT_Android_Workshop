@@ -4,10 +4,12 @@
     android:layout_height="match_parent"
     android:background="@color/colorPrimary">
 
-    <ImageView
+    <com.airbnb.lottie.LottieAnimationView xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:layout_gravity="center"
-        android:src="@drawable/ic_calculator" />
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="anim.json"
+        app:lottie_loop="true" />
 
 </FrameLayout>
